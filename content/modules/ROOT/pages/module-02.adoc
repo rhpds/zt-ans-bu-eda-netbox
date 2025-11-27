@@ -30,27 +30,19 @@ The following services are available in your lab environment:
 
 [cols="1,2,1", options="header"]
 |===
-|Service |Purpose |Access Port
 
+|Service |Purpose 
 |AAP
 |Ansible Automation Platform Web UI
-|443
 
 |NetBox Web
 |NetBox Web Interface
-|8000
 
 |Gitea
 |Git Repository Service
-|3000
 
-|VS Code
-|Visual Studio Code Editor
-|80
-
-|NetBox Term
-|NetBox Command Line
-|N/A
+|Terminal
+|Command Line
 |===
 
 === Lab Credentials
@@ -78,7 +70,7 @@ We are going to use a *Dynamic Inventory* plugin file from our partner *NetBox L
 
 === Create the Project
 
-*Step 1:* In the AAP left sidebar, navigate to menu:Automation Execution[Projects].
+*Step 1:* In the AAP left sidebar, navigate to Automation Execution > Projects.
 
 *Step 2:* Click the blue *Create project* button.
 
@@ -101,7 +93,7 @@ We are going to use a *Dynamic Inventory* plugin file from our partner *NetBox L
 |`Git`
 
 |Source Control URL
-|\`https://github.com/ansible-tmm/netbox-inventory.git`
+|`https://github.com/ansible-tmm/netbox-inventory.git`
 |===
 
 *Step 4:* Click the blue *Create project* button at the bottom.
@@ -143,7 +135,7 @@ This configuration defines how Ansible will query NetBox and organize the invent
 
 We are going to create a *Custom Credential Type* in Ansible Automation Platform to safely access NetBox through their API.
 
-*Step 1:* Navigate to menu:Automation Execution[Infrastructure > Credential Types].
+*Step 1:* Navigate to menu: Automation Execution > Infrastructure > Credential Types.
 
 *Step 2:* Click the blue *Create credential type* button.
 
@@ -182,7 +174,7 @@ env:
 
 === Getting the NetBox API Token
 
-*Step 1:* Switch to the *NetBox web* tab.
+*Step 1:* Switch to the *NetBox* tab.
 
 *Step 2:* To create our *Credential*, we need to get our *NetBox API Token*.
 
@@ -195,21 +187,21 @@ env:
 
 *Step 5:* Click on the *API Tokens* option in the menu.
 
-*Step 6:* Copy the *Key Token* to your clipboard.
-
-[link=Feb-05-2025_at_15.06.21-image.png]
-image::Feb-05-2025_at_15.06.21-image.png[NetBox API Token,border=1]
+*Step 6:* Here you will find the API token section with a pre-created one. 
 
 [IMPORTANT]
 ====
-If you have issues getting the API Token from NetBox, don't worry, it's available below!
+On production you would create a new token dedicated to AAP, but for this lab we already created one for you. No need to make changes now, the token is available below!
 ====
+
+image::Feb-05-2025_at_15.06.21-image.png[NetBox API Token,border=1]
+
 
 === Creating the NetBox Credential in AAP
 
 *Step 1:* Now let's go back to the *AAP* tab and create the credential.
 
-*Step 2:* Navigate to menu:Automation Execution[Infrastructure > Credentials].
+*Step 2:* Navigate to menu: Automation Execution > Infrastructure > Credentials.
 
 *Step 3:* Click the blue *Create credential* button.
 
@@ -237,7 +229,6 @@ If you have issues getting the API Token from NetBox, don't worry, it's availabl
 
 *Step 5:* Click the blue *Create credential* button.
 
-[link=Feb-06-2025_at_12.11.09-image.png]
 image::Feb-06-2025_at_12.11.09-image.png[NetBox Credential Configuration,border=1]
 
 '''
@@ -256,7 +247,6 @@ image::Feb-06-2025_at_12.11.09-image.png[NetBox Credential Configuration,border=
 
 *Step 5:* Select *Create inventory* from the dropdown.
 
-[link=create_inventory_button.png]
 image::create_inventory_button.png[Create Inventory Button,border=1]
 
 *Step 6:* Fill in the following fields:
@@ -287,14 +277,12 @@ If you are not in the `NetBox Dynamic Inventory`, click on it again to edit it.
 
 *Step 2:* On the tab bar, click on *Hosts*. You will notice it's empty.
 
-[link=Feb-05-2025_at_15.37.32-image.png]
 image::Feb-05-2025_at_15.37.32-image.png[Empty Hosts Tab,border=1]
 
 === Create the Dynamic Source
 
 *Step 1:* Now on the same tab bar, click on *Sources*.
 
-[link=Feb-05-2025_at_15.38.09-image.png]
 image::Feb-05-2025_at_15.38.09-image.png[Sources Tab,border=1]
 
 *Step 2:* Click the blue *Create Source* button.
@@ -329,14 +317,12 @@ These two options will be useful to save time during our workshop. Check the too
 
 *Step 13:* Click the blue *Create source* button.
 
-[link=Feb-05-2025_at_15.41.48-image.png]
 image::Feb-05-2025_at_15.41.48-image.png[Create Source Configuration,border=1]
 
 === Sync the Inventory
 
 *Step 1:* Now in the *Details* view of the `netbox-inventory-source` we just created, press the *Launch inventory update* button in the top right to sync the devices.
 
-[link=Feb-06-2025_at_12.16.55-image.png]
 image::Feb-06-2025_at_12.16.55-image.png[Launch Inventory Update,border=1]
 
 === Verify the Synchronized Devices
@@ -345,7 +331,6 @@ image::Feb-06-2025_at_12.16.55-image.png[Launch Inventory Update,border=1]
 
 *Step 2:* Click the *Hosts* tab to verify the Cisco Catalyst 8000v device is there.
 
-[link=Feb-06-2025_at_12.18.18-image.png]
 image::Feb-06-2025_at_12.18.18-image.png[Synchronized Hosts,border=1]
 
 [TIP]
