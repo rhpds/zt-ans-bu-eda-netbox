@@ -93,17 +93,15 @@ Currently, not all fields of an *EDA Project* can be edited after creation. If t
 |`Git`
 
 |Source Control URL
-|\`https://github.com/ansible-tmm/aap-netbox-rulebooks-cisco-live.git`
+|`https://github.com/ansible-tmm/aap-netbox-rulebooks-cisco-live.git`
 |===
 
 *Step 5:* Click the blue *Create project* button at the bottom.
 
-[link=Feb-06-2025_at_00.09.45-image.png]
 image::Feb-06-2025_at_00.09.45-image.png[Create EDA Project,border=1]
 
 *Step 6:* Wait for the project to show a green tick and *Completed* in the *Status* column, then move on to the next step.
 
-[link=Feb-06-2025_at_00.10.57-image.png]
 image::Feb-06-2025_at_00.10.57-image.png[Project Status Completed,border=1]
 
 '''
@@ -127,7 +125,6 @@ We pre-loaded this credential as the URL is internal to the workshop platform. B
 
 *Step 4:* The credential form should look like this:
 
-[link=Feb-06-2025_at_00.12.02-image.png]
 image::Feb-06-2025_at_00.12.02-image.png[AAP Credential Configuration,border=1]
 
 *Step 5:* Click the *Cancel* button to leave the Credential screen without making changes.
@@ -193,7 +190,6 @@ Make sure to fill everything correctly and pick the `AAP` credential. *EDA Ruleb
 
 *Step 7:* Wait a few seconds. The status will change to *Activation status: Running* if everything was successful.
 
-[link=Feb-05-2025_at_16.07.10-image.png]
 image::Feb-05-2025_at_16.07.10-image.png[Rulebook Activation Running,border=1]
 
 [TIP]
