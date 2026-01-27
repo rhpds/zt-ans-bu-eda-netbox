@@ -16,6 +16,7 @@ retry() {
     exit 1
 }
 
+retry "subscription-manager clean"
 retry "curl -k -L https://${SATELLITE_URL}/pub/katello-server-ca.crt -o /etc/pki/ca-trust/source/anchors/${SATELLITE_URL}.ca.crt"
 retry "update-ca-trust"
 KATELLO_INSTALLED=$(rpm -qa | grep -c katello)
