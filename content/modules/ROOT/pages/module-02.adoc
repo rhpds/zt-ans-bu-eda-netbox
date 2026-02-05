@@ -377,6 +377,7 @@ docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
 *Step 4:* Wait 2-3 minutes for the services to fully start, then try accessing NetBox again.
 ====
 
+////
 [WARNING]
 ====
 *Missing NetBox Pre-loaded Content*
@@ -394,6 +395,7 @@ su - rhel -c 'cd /home/rhel/netbox-setup; ansible-navigator run /home/rhel/netbo
 
 *Step 2:* Wait for the setup playbook to complete, then refresh the NetBox web interface.
 ====
+////
 
 '''
 

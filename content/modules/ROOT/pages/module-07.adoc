@@ -503,6 +503,7 @@ su - rhel -c 'cd /home/rhel; ansible-navigator run /home/rhel/5-eda-playbooks.ym
 *Step 3:* Wait for the playbook to complete, then refresh the AAP web interface.
 ====
 
+////
 [WARNING]
 ====
 *Missing NetBox Pre-loaded Content*
@@ -520,6 +521,7 @@ su - rhel -c 'cd /home/rhel/netbox-setup; ansible-navigator run /home/rhel/netbo
 
 *Step 2:* Wait for the setup playbook to complete, then refresh the NetBox web interface.
 ====
+////
 
 [WARNING]
 ====
