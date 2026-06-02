@@ -472,12 +472,12 @@ If AAP is not showing a *Fire count* in the *Rulebook Activations* or you don't 
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker stop
+sudo docker compose --project-directory=/tmp/netbox-docker stop
 ----
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
+sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
 ----
 
 *Step 5:* Wait 2-3 minutes for the services to fully restart.
@@ -537,14 +537,14 @@ NetBox needs a couple of minutes to get started.
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker stop
+sudo docker compose --project-directory=/tmp/netbox-docker stop
 ----
 
 *Step 3:* Run the following command to restart NetBox services:
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
+sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
 ----
 
 *Step 4:* Wait 2-3 minutes for the services to fully start, then try accessing NetBox again.
