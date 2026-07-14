@@ -1,1 +1,88 @@
+= Event-Driven Ansible and NetBox as a Network Source of Truth
 
+This is an https://demo.redhat.com[RHDP (Red Hat Demo Platform)] Showroom lab that teaches Event-Driven Ansible (EDA) with NetBox as a network source of truth. It is deployed on RHDP infrastructure and uses the https://github.com/rhpds/rhdp_showroom_theme[Showroom content framework].
+
+== Lab Modules
+
+[cols="1,3",options="header"]
+|===
+| Module | Description
+
+| link:content/modules/ROOT/pages/module-01.adoc[Module 1: Network Automation and Sources of Truth]
+| Introduction to network automation concepts, NetBox as a source of truth, and the lab environment.
+
+| link:content/modules/ROOT/pages/module-02.adoc[Module 2: AAP Dynamic Inventory]
+| Configure NetBox as a dynamic inventory source in Ansible Automation Platform.
+
+| link:content/modules/ROOT/pages/module-03.adoc[Module 3: Event-Driven Ansible: Automation Decisions]
+| Introduction to Event-Driven Ansible and automation decisions.
+
+| link:content/modules/ROOT/pages/module-04.adoc[Module 4: Event-Driven Ansible Rulebooks]
+| Create and configure EDA rulebooks for event-driven automation.
+
+| link:content/modules/ROOT/pages/module-05.adoc[Module 5: Event-Driven Ansible Playbooks]
+| Build playbooks triggered by EDA rulebook actions.
+
+| link:content/modules/ROOT/pages/module-06.adoc[Module 6: New Device Added Workflow]
+| Automate network device onboarding workflows triggered by NetBox events.
+
+| link:content/modules/ROOT/pages/module-07.adoc[Module 7: Event-Driven Ansible and NetBox in Action]
+| End-to-end demonstration of EDA and NetBox working together.
+|===
+
+== Lab Environment
+
+[cols="1,1,2",options="header"]
+|===
+| Host | IP (secondary) | Purpose
+
+| control | 192.168.1.10 | AAP 2.5 (automation controller + EDA controller)
+| netbox | 192.168.1.11 | NetBox (Docker Compose, port 8000)
+| devtools | 192.168.1.12 | code-server + student workspace
+| cisco / cisco2 | DHCP | Cisco C8000v routers (managed devices)
+|===
+
+== Project Structure
+
+----
+content/                          Lab content (Antora documentation site)
+  modules/ROOT/pages/             AsciiDoc lab exercise pages
+  antora.yml                      Antora component descriptor
+setup-automation/                 Initial lab provisioning playbooks and scripts
+runtime-automation/               Per-module setup scripts (run during lab exercises)
+config/                           RHDP deployment descriptors (instances, networks, firewall, secrets)
+utilities/                        Build and serve scripts
+ui-config.yml                     Showroom UI module labels and tab URLs
+default-site.yml                  Antora site playbook (build input)
+www/                              Generated static site output (do not edit)
+----
+
+== Building the Lab Content
+
+Requires `podman` (or `docker`) installed locally.
+
+[source,bash]
+----
+# Build the Antora documentation site
+utilities/lab-build
+
+# Serve the built site locally at http://localhost:8080/index.html
+utilities/lab-serve
+
+# Stop the local HTTP server
+utilities/lab-stop
+
+# Remove the built site (cleans www/)
+utilities/lab-clean
+----
+
+== Key Technologies
+
+* https://www.ansible.com/products/automation-platform[Ansible Automation Platform] 2.5
+* https://docs.ansible.com/ansible/latest/collections/ansible/eda/index.html[Event-Driven Ansible]
+* https://netbox.dev[NetBox] (via https://github.com/netbox-community/netbox-docker[netbox-docker])
+* https://antora.org[Antora] (documentation site generator)
+
+== Contributing
+
+To report bugs or suggest improvements, open an issue at https://github.com/rhpds/zt-ans-bu-eda-netbox/issues.
