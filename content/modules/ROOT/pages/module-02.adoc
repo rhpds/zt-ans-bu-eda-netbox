@@ -38,9 +38,6 @@ The following services are available in your lab environment:
 |NetBox Web
 |NetBox Web Interface
 
-|Gitea
-|Git Repository Service
-
 |Terminal
 |Command Line
 |===
