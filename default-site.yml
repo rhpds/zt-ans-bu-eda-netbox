@@ -1,7 +1,7 @@
 ---
 site:
   title: Event-Driven Ansible and Netbox
-  url: https://redhat-scholars.github.io/course-template
+  url: https://rhpds.github.io/zt-ans-bu-eda-netbox
   start_page: modules::module-01.adoc
 
 content:

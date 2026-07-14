@@ -173,7 +173,7 @@ tee /tmp/setup.yml << EOF
         organization: Default
         state: present
         scm_type: git
-        scm_url: https://github.com/leogallego/ansible-netbox-setup.git
+        scm_url: https://github.com/ansible-tmm/ansible-netbox-setup.git
         validate_certs: false
         controller_username: admin
         controller_password: ansible123!
