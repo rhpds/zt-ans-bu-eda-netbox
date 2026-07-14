@@ -3,6 +3,35 @@
 systemctl stop systemd-tmpfiles-setup.service
 systemctl disable systemd-tmpfiles-setup.service
 
+
+retry() {
+    for i in {1..3}; do
+        echo "Attempt $i: $2"
+        if $1; then
+            return 0
+        fi
+        [ $i -lt 3 ] && sleep 5
+    done
+    echo "Failed after 3 attempts: $2"
+    exit 1
+}
+
+retry "subscription-manager clean"
+retry "curl -k -L https://${SATELLITE_URL}/pub/katello-server-ca.crt -o /etc/pki/ca-trust/source/anchors/${SATELLITE_URL}.ca.crt"
+retry "update-ca-trust"
+KATELLO_INSTALLED=$(rpm -qa | grep -c katello)
+if [ $KATELLO_INSTALLED -eq 0 ]; then
+  retry "rpm -Uhv https://${SATELLITE_URL}/pub/katello-ca-consumer-latest.noarch.rpm"
+fi
+subscription-manager status
+if [ $? -ne 0 ]; then
+    retry "subscription-manager register --org=${SATELLITE_ORG} --activationkey=${SATELLITE_ACTIVATIONKEY}"
+fi
+retry "dnf install -y python3-pip python3-libsemanage"
+
+
+
+
 nmcli connection add type ethernet con-name enp2s0 ifname enp2s0 ipv4.addresses 192.168.1.10/24 ipv4.method manual connection.autoconnect yes
 nmcli connection up enp2s0
 echo "192.168.1.10 control.lab control" >> /etc/hosts
@@ -41,7 +70,7 @@ ansible-galaxy collection install netbox.netbox
 
 ########
 ## install python3 libraries needed for the Cloud Report
-dnf install -y python3-pip python3-libsemanage
+##dnf install -y python3-pip python3-libsemanage
 pip install pynetbox --user
 
 # Create a playbook for the user to execute

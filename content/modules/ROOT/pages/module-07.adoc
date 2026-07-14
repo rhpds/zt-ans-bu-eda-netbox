@@ -1,6 +1,7 @@
 = Exercise 7: Event-Driven Ansible and NetBox in Action
 :icons: font
 :source-highlighter: rouge
+:experimental:
 
 '''
 
@@ -81,14 +82,14 @@ image::Feb-06-2025_at_01.05.01-image.png[NetBox Device cat1,border=1]
 
 === Review Custom Fields
 
-*Step 4:* Some other data points we had to pre-create were *Custom Fields* for the `ansible_host` and `ansible_port` variables. You can review these in the menu:Customization[Custom Fields] menu of the sidebar.
+*Step 4:* Some other data points we had to pre-create were *Custom Fields* for the `ansible_host` and `ansible_port` variables. You can review these in the *Customization > Custom Fields* menu of the sidebar in NetBox.
 
 [link=Feb-06-2025_at_01.17.01-image.png]
 image::Feb-06-2025_at_01.17.01-image.png[NetBox Custom Fields,border=1]
 
 === Review Config Contexts
 
-*Step 5:* Another setting we set in advance are the *Config Contexts* for the custom data we want to store for the `NTP Servers` and `Login Banner`. You can review these in the menu:Provisioning[Config Contexts] menu of the sidebar.
+*Step 5:* Another setting we set in advance are the *Config Contexts* for the custom data we want to store for the `NTP Servers` and `Login Banner`. You can review these in the *Provisioning > Config Contexts* menu of the sidebar in NetBox.
 
 [link=Feb-06-2025_at_01.17.19-image.png]
 image::Feb-06-2025_at_01.17.19-image.png[NetBox Config Contexts,border=1]
@@ -108,7 +109,7 @@ To configure NetBox to send a notification to Ansible Automation Platform when a
 
 === Create the Webhook
 
-*Step 1:* In the NetBox tab, go to the left sidebar and navigate to menu:Operations[Webhooks].
+*Step 1:* In the NetBox tab, go to the left sidebar and navigate to *Operations > Webhooks*
 
 [NOTE]
 ====
@@ -127,7 +128,7 @@ We will create this first, as it is required for the Event Rules.
 |`EDA Webhook`
 
 |URL
-|`http://control:5001/endpoint'
+|`http://control:5001/endpoint`
 
 |SSL
 |Disable the checkbox (unchecked)
@@ -151,7 +152,7 @@ This webhook will forward events from NetBox to your Event-Driven Ansible rulebo
 
 === Overview
 
-Now we can go to menu:Operations[Event Rules] to create the three events we want to forward.
+Now we can go to *Operations > Event Rules* to create the three events we want to forward.
 
 === Create NTP Servers Event Rule
 
@@ -254,7 +255,7 @@ Before we actually apply changes:
 
 * Did you notice that `cat1` had only 2 NTP servers configured and a default banner?
 * If you want to check, go to:
-** *AAP* tab → menu:Automation Execution[Infrastructure > Inventories] → *NetBox Dynamic Inventory* → *Hosts* → `cat1`
+** *AAP* tab → Automation Execution > Infrastructure > Inventories → *NetBox Dynamic Inventory* → *Hosts* → `cat1`
 ====
 
 [link=Feb-07-2025_at_02.36.00-image.png]
@@ -296,14 +297,14 @@ Pay attention to the commas! JSON syntax must be correct.
 
 *Step 1:* Switch to the *AAP* tab.
 
-*Step 2:* A quick way to see if an event was triggered is to check the *Fire count* counter in the *Rulebook Activations* screen within menu:Automation Decisions[Rulebook Activations].
+*Step 2:* A quick way to see if an event was triggered is to check the *Fire count* counter in the *Rulebook Activations* screen within *Automation Decisions > Rulebook Activations*.
 
 [link=Feb-07-2025_at_02.56.56-image.png]
 image::Feb-07-2025_at_02.56.56-image.png[Rulebook Activation Fire Count,border=1]
 
 === Review the Rule Audit
 
-*Step 3:* For a more detailed output, navigate to menu:Automation Decisions[Rule Audit]. There you will see which Job Template was triggered.
+*Step 3:* For a more detailed output, navigate to *Automation Decisions > Rule Audit*. There you will see which Job Template was triggered.
 
 [link=Feb-07-2025_at_02.58.59-image.png]
 image::Feb-07-2025_at_02.58.59-image.png[Rule Audit Details,border=1]
@@ -320,7 +321,7 @@ image::Feb-07-2025_at_03.01.39-image.png[Webhook Payload,border=1]
 
 === Check the Job Execution
 
-*Step 6:* If you want to see the actual Job Template output, navigate to menu:Automation Execution[Jobs] and check the Job queue to see the details.
+*Step 6:* If you want to see the actual Job Template output, navigate to *Automation Execution > Jobs* and check the Job queue to see the details.
 
 [NOTE]
 ====
@@ -350,7 +351,7 @@ If in doubt, follow the same steps as for the `ntp_servers` configuration in Tas
 
 *Step 1:* Ensure you're in the *NetBox* tab.
 
-*Step 2:* Navigate to menu:Devices[Devices] in the left sidebar.
+*Step 2:* Navigate to *Devices > Devices* in the left sidebar.
 
 *Step 3:* Click the green *+ Add* button on the top right.
 
@@ -471,12 +472,12 @@ If AAP is not showing a *Fire count* in the *Rulebook Activations* or you don't 
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker stop
+sudo docker compose --project-directory=/tmp/netbox-docker stop
 ----
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
+sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
 ----
 
 *Step 5:* Wait 2-3 minutes for the services to fully restart.
@@ -502,6 +503,7 @@ su - rhel -c 'cd /home/rhel; ansible-navigator run /home/rhel/5-eda-playbooks.ym
 *Step 3:* Wait for the playbook to complete, then refresh the AAP web interface.
 ====
 
+////
 [WARNING]
 ====
 *Missing NetBox Pre-loaded Content*
@@ -519,6 +521,7 @@ su - rhel -c 'cd /home/rhel/netbox-setup; ansible-navigator run /home/rhel/netbo
 
 *Step 2:* Wait for the setup playbook to complete, then refresh the NetBox web interface.
 ====
+////
 
 [WARNING]
 ====
@@ -534,14 +537,14 @@ NetBox needs a couple of minutes to get started.
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker stop
+sudo docker compose --project-directory=/tmp/netbox-docker stop
 ----
 
 *Step 3:* Run the following command to restart NetBox services:
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
+sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
 ----
 
 *Step 4:* Wait 2-3 minutes for the services to fully start, then try accessing NetBox again.

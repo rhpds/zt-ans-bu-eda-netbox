@@ -1,6 +1,7 @@
 = Exercise 5: Event-Driven Ansible Playbooks
 :icons: font
 :source-highlighter: rouge
+:experimental: 
 
 '''
 
@@ -176,14 +177,14 @@ NetBox needs a couple of minutes to get started.
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker stop
+sudo docker compose --project-directory=/tmp/netbox-docker stop
 ----
 
 *Step 3:* Run the following command to restart NetBox services:
 
 [source,bash]
 ----
-docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
+sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-worker
 ----
 
 *Step 4:* Wait 2-3 minutes for the services to fully start, then try accessing NetBox again.

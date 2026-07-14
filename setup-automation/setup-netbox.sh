@@ -30,8 +30,8 @@ echo "192.168.1.12 devtools.lab devtools" >> /etc/hosts
 
 # Retry function
 retry() {
-    local max_attempts=3
-    local delay=5
+    local max_attempts=6
+    local delay=30
     local attempt=1
     
     while [ $attempt -le $max_attempts ]; do
