@@ -1,4 +1,4 @@
-= Exercise 7: Event-Driven Ansible and NetBox in Action
+= Module 7: Event-Driven Ansible and NetBox in Action
 :icons: font
 :source-highlighter: rouge
 :experimental:
@@ -421,7 +421,7 @@ Congratulations! You've just witnessed Event-Driven Ansible automatically provis
 
 == Summary
 
-In this exercise, you've accomplished:
+In this module, you've accomplished:
 
 * Reviewed the NetBox setup including devices, custom fields, and config contexts
 * Created webhooks to connect NetBox with Event-Driven Ansible
@@ -487,11 +487,11 @@ sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-w
 ====
 *Missing Job Templates*
 
-For the Job Templates to be pre-created in Exercise 5, the `NetBox Dynamic Inventory` must exist.
+For the Job Templates to be pre-created in Module 5, the `NetBox Dynamic Inventory` must exist.
 
 *If the inventory doesn't exist:*
 
-*Step 1:* First, go to Exercise 2 and create the `NetBox Dynamic Inventory`.
+*Step 1:* First, go to Module 2 and create the `NetBox Dynamic Inventory`.
 
 *Step 2:* Then, run the following command in the *AAP terminal* tab:
 
@@ -508,7 +508,7 @@ su - rhel -c 'cd /home/rhel; ansible-navigator run /home/rhel/5-eda-playbooks.ym
 ====
 *Missing NetBox Pre-loaded Content*
 
-For the Dynamic Inventory in Exercise 2 to work, we need some NetBox pre-loaded content.
+For the Dynamic Inventory in Module 2 to work, we need some NetBox pre-loaded content.
 
 *If you can't see devices in the NetBox tab:*
 

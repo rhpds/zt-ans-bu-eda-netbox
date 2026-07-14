@@ -1,4 +1,4 @@
-= Exercise 2: AAP Dynamic Inventory
+= Module 2: AAP Dynamic Inventory
 :icons: font
 :source-highlighter: rouge
 
@@ -344,7 +344,7 @@ Congratulations! You have successfully configured NetBox as a Dynamic Inventory 
 
 Excellent work! You've successfully completed the Dynamic Inventory configuration and verified that devices from NetBox are now available in Ansible Automation Platform.
 
-*Step 1:* Press the *Next* button below to go to the next challenge once you've completed the task.
+*Step 1:* Press the *Next* button below to go to the next module once you've completed the task.
 
 '''
 
@@ -400,4 +400,4 @@ su - rhel -c 'cd /home/rhel/netbox-setup; ansible-navigator run /home/rhel/netbo
 '''
 
 [.text-center]
-_End of Exercise 2_
+_End of Module 2_

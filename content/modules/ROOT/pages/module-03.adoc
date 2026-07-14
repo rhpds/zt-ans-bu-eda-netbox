@@ -1,4 +1,4 @@
-= Exercise 3: Event-Driven Ansible - Automation Decisions
+= Module 3: Event-Driven Ansible - Automation Decisions
 :icons: font
 :source-highlighter: rouge
 
@@ -38,11 +38,7 @@ The following services are available in your lab environment:
 |NetBox Web Interface
 |8000
 
-|VS Code
-|Visual Studio Code Editor
-|80
-
-|Terminal-1
+|Terminal
 |DevTools Command Line
 |N/A
 |===
@@ -136,7 +132,7 @@ By default, you will see:
 This credential is added at installation time.
 
 *AAP*:: 
-This credential was pre-loaded into the AAP instance for this workshop. This credential will be used for *Rulebook Activations* in upcoming exercises.
+This credential was pre-loaded into the AAP instance for this workshop. This credential will be used for *Rulebook Activations* in upcoming modules.
 
 [link=eda_controller_credentials.png]
 image::eda_controller_credentials.png[EDA Controller Credentials,border=1]
@@ -172,7 +168,7 @@ Projects in EDA Controller work the same way as in Automation Controller, linkin
 
 == Summary
 
-In this exercise, you've learned about the key components of Event-Driven Ansible:
+In this module, you've learned about the key components of Event-Driven Ansible:
 
 * *Decision Environments:* Container images with tools to execute rulebooks
 * *Credentials:* Secure access to external systems and repositories
@@ -186,9 +182,9 @@ These three resources work together to enable Event-Driven Ansible to listen for
 
 Congratulations! You've completed the introduction to Event-Driven Ansible and explored its core components.
 
-*Step 1:* Press the *Next* button below to go to the next challenge.
+*Step 1:* Press the *Next* button below to go to the next module.
 
 '''
 
 [.text-center]
-_End of Exercise 3_
+_End of Module 3_

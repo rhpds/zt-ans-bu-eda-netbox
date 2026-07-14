@@ -29,7 +29,7 @@ Welcome to the *Network Automation and Sources of Truth* laboratory. In this han
 
 === What You'll Learn
 
-In this laboratory, we will get started with Network Automation and Sources of Truth using *Ansible Automation Platform 2.5* together with *NetBox*. You will complete hands-on exercises to:
+In this laboratory, we will get started with Network Automation and Sources of Truth using *Ansible Automation Platform 2.5* together with *NetBox*. You will complete hands-on tasks to:
 
 * Configure NetBox as a Dynamic Inventory in Ansible Automation Platform using their *Certified Content Collection*
 * Integrate with *Event-Driven Ansible* through webhooks to listen to events in your network and take action
@@ -65,13 +65,13 @@ The following services are available in your lab environment:
 
 '''
 
-== Exercise 1: Introduction to Ansible Automation Platform Web UI
+== Task 1: Introduction to Ansible Automation Platform Web UI
 
 === Overview
 
 Welcome to Red Hat Ansible Automation Platform. The new unified web UI in Ansible Automation Platform 2.5 has integrated all the components into a single control dashboard. We will be exploring the Automation Execution (automation controller) and Automation Decision (event-driven Ansible) functionality during this workshop.
 
-For this exercise, we will focus on the *Automation Execution (Automation controller)* and its features.
+For this task, we will focus on the *Automation Execution (Automation controller)* and its features.
 
 === Login Credentials
 
@@ -93,12 +93,12 @@ Use the following credentials to log in to Ansible Automation Platform:
 
 [NOTE]
 ====
-In the following exercises, we will show you how to configure NetBox as the Dynamic Inventory source for Ansible Automation Platform and how to set up Event-Driven Ansible in the web UI, just as you would in a corporate environment to run your automation.
+In the following modules, we will show you how to configure NetBox as the Dynamic Inventory source for Ansible Automation Platform and how to set up Event-Driven Ansible in the web UI, just as you would in a corporate environment to run your automation.
 ====
 
 '''
 
-== Exercise 2: Explore the Overview Dashboard
+== Task 2: Explore the Overview Dashboard
 
 === Task Description
 
@@ -151,7 +151,7 @@ This new section provides interactive in-line tutorials that are very useful for
 
 '''
 
-== Exercise 3: Explore the Inventories Section
+== Task 3: Explore the Inventories Section
 
 === What is an Inventory?
 
@@ -179,7 +179,7 @@ For now, just explore the interface. You will create your own inventory soon!
 
 '''
 
-== Exercise 4: Explore the Projects Section
+== Task 4: Explore the Projects Section
 
 === What is a Project?
 
@@ -200,7 +200,7 @@ image::projects_1.png[Controller Project,border=1]
 
 '''
 
-== Exercise 5: Explore the Templates Section
+== Task 5: Explore the Templates Section
 
 === What is a Job Template?
 
@@ -228,7 +228,7 @@ Later on in this workshop, we will be creating our own Job Templates.
 
 Congratulations! You've completed the introduction to Ansible Automation Platform and explored the key components of the unified web UI.
 
-*Step 1:* Press the *Next* button below to proceed to the next challenge once you've completed all the tasks above.
+*Step 1:* Press the *Next* button below to proceed to the next module once you've completed all the tasks above.
 
 '''
 
@@ -268,4 +268,4 @@ sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-w
 '''
 
 [.text-center]
-_End of Lab Exercise 1
+_End of Module 1

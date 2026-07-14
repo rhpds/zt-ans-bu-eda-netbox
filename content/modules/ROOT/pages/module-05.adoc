@@ -1,4 +1,4 @@
-= Exercise 5: Event-Driven Ansible Playbooks
+= Module 5: Event-Driven Ansible Playbooks
 :icons: font
 :source-highlighter: rouge
 :experimental: 
@@ -9,7 +9,7 @@
 
 === Event-Driven Ansible and Playbooks
 
-In this exercise, we will check two pre-created Job Templates that we will use as part of our Event-Driven Ansible actions. The Job Templates are the usual ones found in Automation Controller, but we are going to use them later in our Ansible Rulebook as the `action` condition.
+In this module, we will check two pre-created Job Templates that we will use as part of our Event-Driven Ansible actions. The Job Templates are the usual ones found in Automation Controller, but we are going to use them later in our Ansible Rulebook as the `action` condition.
 
 Note how the `name` of each of them matches the one specified in `run_job_template` in our `netbox-webhooks.yml` Rulebook.
 
@@ -41,10 +41,6 @@ The following services are available in your lab environment:
 |NetBox Web
 |NetBox Web Interface
 |8000
-
-|VS Code
-|Visual Studio Code Editor
-|80
 
 |Terminal
 |DevTools Command Line
@@ -144,7 +140,7 @@ The Job Templates you just verified are directly referenced in your Event-Driven
 
 == Summary
 
-In this exercise, you've verified that the required Job Templates are in place:
+In this module, you've verified that the required Job Templates are in place:
 
 * *Configure NTP Servers* - Automatically updates NTP configuration on network devices
 * *Configure Login Banner* - Automatically updates login banners on network devices
@@ -157,7 +153,7 @@ These Job Templates are now ready to be triggered automatically by your Event-Dr
 
 Congratulations! You've verified that the Job Templates needed for Event-Driven Ansible automation are properly configured.
 
-*Step 1:* Press the *Next* button below to go to the next challenge.
+*Step 1:* Press the *Next* button below to go to the next module.
 
 '''
 
@@ -193,4 +189,4 @@ sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-w
 '''
 
 [.text-center]
-_End of Exercise 5_
+_End of Module 5_

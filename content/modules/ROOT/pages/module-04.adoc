@@ -1,4 +1,4 @@
-= Exercise 4: Event-Driven Ansible Rulebooks
+= Module 4: Event-Driven Ansible Rulebooks
 :icons: font
 :source-highlighter: rouge
 
@@ -27,10 +27,6 @@ The following services are available in your lab environment:
 |NetBox Web
 |NetBox Web Interface
 |8000
-
-|VS Code
-|Visual Studio Code Editor
-|80
 
 |NetBox Term
 |NetBox Command Line
@@ -62,7 +58,7 @@ The following services are available in your lab environment:
 
 === Overview
 
-In this exercise, we will create a Rulebook activation and a Job Template that performs remediation when a certain event occurs.
+In this module, we will create a Rulebook activation and a Job Template that performs remediation when a certain event occurs.
 
 [WARNING]
 ====
@@ -238,7 +234,7 @@ Below you can check the Rulebook we imported. This rulebook contains 5 rules - t
         name: "Configure VLANs"
 
   - name: Update login banner
-    condition: event.payload.event == "updated" and event.payload.model == "updated" and event.payload.data.name == "login_banner"
+    condition: event.payload.event == "updated" and event.payload.model == "configcontext" and event.payload.data.name == "login_banner"
     action:
       run_job_template:
         organization: "Default"
@@ -291,7 +287,7 @@ This enables true event-driven automation!
 
 == Summary
 
-In this exercise, you've accomplished the following:
+In this module, you've accomplished the following:
 
 * Created an EDA Project that contains your rulebooks
 * Explored EDA credentials that enable automation execution
@@ -306,7 +302,7 @@ Your Event-Driven Ansible setup is now ready to automatically respond to changes
 
 Excellent work! You've successfully configured Event-Driven Ansible to listen for NetBox events and automatically trigger automation.
 
-*Step 1:* Press the *Next* button below to go to the next challenge.
+*Step 1:* Press the *Next* button below to go to the next module.
 
 '''
 
@@ -342,4 +338,4 @@ sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-w
 '''
 
 [.text-center]
-_End of Exercise 4_
+_End of Module 4_

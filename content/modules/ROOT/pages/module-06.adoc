@@ -1,4 +1,4 @@
-= Exercise 6: Event-Driven Ansible - New Device Added Workflow
+= Module 6: Event-Driven Ansible - New Device Added Workflow
 :icons: font
 :source-highlighter: rouge
 :experimental: 
@@ -137,14 +137,14 @@ image::Feb-07-2025_at_01.57.45-image.png[Workflow Execution,border=1]
 
 [NOTE]
 ====
-In the next exercise, we will see how this workflow gets triggered automatically when we add a device to our site in NetBox. This demonstrates the power of Event-Driven Ansible!
+In the next module, we will see how this workflow gets triggered automatically when we add a device to our site in NetBox. This demonstrates the power of Event-Driven Ansible!
 ====
 
 '''
 
 == Summary
 
-In this exercise, you've accomplished the following:
+In this module, you've accomplished the following:
 
 * Explored a pre-configured Workflow Job Template
 * Learned how Workflow Job Templates connect multiple Job Templates
@@ -195,4 +195,4 @@ sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-w
 '''
 
 [.text-center]
-_End of Exercise 6_
+_End of Module 6_
