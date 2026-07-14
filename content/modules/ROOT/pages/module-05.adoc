@@ -38,16 +38,16 @@ The following services are available in your lab environment:
 |Ansible Automation Platform Web UI
 |443
 
-|NetBox Web
+|NetBox
 |NetBox Web Interface
 |8000
 
-|Terminal
-|DevTools Command Line
-|N/A
-
 |AAP Terminal
 |AAP Command Line
+|N/A
+
+|NetBox Terminal
+|NetBox Command Line
 |N/A
 |===
 
@@ -167,7 +167,7 @@ NetBox needs a couple of minutes to get started.
 
 *If you can't see the NetBox login screen:*
 
-*Step 1:* Go to the *netbox term* tab.
+*Step 1:* Go to the *NetBox Terminal* tab.
 
 *Step 2:* Run the following command to stop NetBox:
 

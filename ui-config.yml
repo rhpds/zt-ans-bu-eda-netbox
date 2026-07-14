@@ -32,12 +32,7 @@ tabs:
   - name: Netbox
     url: https://netbox-${guid}.${domain}
     external: false
-  - name: gitea
-    url: https://gitea-${guid}.${domain}/
-  # - name: VS Ccode
-  #   url: https://vscode-${guid}.${domain}
-  #   external: false
-  - name: ">_Terminal"
-    url: /wetty_devtools
-    secondary_name: ">_Netbox"
-    secondary_url: /wetty_netbox   
+  - name: ">_AAP Terminal"
+    url: /wetty_control
+  - name: ">_NetBox Terminal"
+    url: /wetty_netbox

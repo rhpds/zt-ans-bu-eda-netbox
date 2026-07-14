@@ -34,12 +34,16 @@ The following services are available in your lab environment:
 |Ansible Automation Platform Web UI
 |443
 
-|NetBox Web
+|NetBox
 |NetBox Web Interface
 |8000
 
-|Terminal
-|DevTools Command Line
+|AAP Terminal
+|AAP Command Line
+|N/A
+
+|NetBox Terminal
+|NetBox Command Line
 |N/A
 |===
 
