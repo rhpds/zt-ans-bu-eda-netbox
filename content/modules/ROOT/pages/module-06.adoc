@@ -1,4 +1,4 @@
-= Exercise 6: Event-Driven Ansible - New Device Added Workflow
+= Module 6: Event-Driven Ansible - New Device Added Workflow
 :icons: font
 :source-highlighter: rouge
 :experimental: 
@@ -32,16 +32,16 @@ The following services are available in your lab environment:
 |Ansible Automation Platform Web UI
 |443
 
-|NetBox Web
+|NetBox
 |NetBox Web Interface
 |8000
 
-|NetBox Term
-|NetBox Command Line
+|AAP Terminal
+|AAP Command Line
 |N/A
 
-|AAP Term
-|AAP Command Line
+|NetBox Terminal
+|NetBox Command Line
 |N/A
 |===
 
@@ -137,14 +137,14 @@ image::Feb-07-2025_at_01.57.45-image.png[Workflow Execution,border=1]
 
 [NOTE]
 ====
-In the next exercise, we will see how this workflow gets triggered automatically when we add a device to our site in NetBox. This demonstrates the power of Event-Driven Ansible!
+In the next module, we will see how this workflow gets triggered automatically when we add a device to our site in NetBox. This demonstrates the power of Event-Driven Ansible!
 ====
 
 '''
 
 == Summary
 
-In this exercise, you've accomplished the following:
+In this module, you've accomplished the following:
 
 * Explored a pre-configured Workflow Job Template
 * Learned how Workflow Job Templates connect multiple Job Templates
@@ -173,7 +173,7 @@ NetBox needs a couple of minutes to get started.
 
 *If you can't see the NetBox login screen in the NetBox tab:*
 
-*Step 1:* Go to the *netbox term* tab.
+*Step 1:* Go to the *NetBox Terminal* tab.
 
 *Step 2:* Run the following command to stop NetBox:
 
@@ -195,4 +195,4 @@ sudo docker compose --project-directory=/tmp/netbox-docker up -d netbox netbox-w
 '''
 
 [.text-center]
-_End of Exercise 6_
+_End of Module 6_

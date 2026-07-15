@@ -1,4 +1,4 @@
-= Exercise 2: AAP Dynamic Inventory
+= Module 2: AAP Dynamic Inventory
 :icons: font
 :source-highlighter: rouge
 
@@ -30,19 +30,23 @@ The following services are available in your lab environment:
 
 [cols="1,2,1", options="header"]
 |===
+|Service |Purpose |Access Port
 
-|Service |Purpose 
 |AAP
 |Ansible Automation Platform Web UI
+|443
 
-|NetBox Web
+|NetBox
 |NetBox Web Interface
+|8000
 
-|Gitea
-|Git Repository Service
+|AAP Terminal
+|AAP Command Line
+|N/A
 
-|Terminal
-|Command Line
+|NetBox Terminal
+|NetBox Command Line
+|N/A
 |===
 
 === Lab Credentials
@@ -344,7 +348,7 @@ Congratulations! You have successfully configured NetBox as a Dynamic Inventory 
 
 Excellent work! You've successfully completed the Dynamic Inventory configuration and verified that devices from NetBox are now available in Ansible Automation Platform.
 
-*Step 1:* Press the *Next* button below to go to the next challenge once you've completed the task.
+*Step 1:* Press the *Next* button below to go to the next module once you've completed the task.
 
 '''
 
@@ -358,7 +362,7 @@ NetBox needs a couple of minutes to get started.
 
 *If you can't see the NetBox login screen:*
 
-*Step 1:* Go to the *netbox term* tab.
+*Step 1:* Go to the *NetBox Terminal* tab.
 
 *Step 2:* Run the following command to stop NetBox:
 
@@ -400,4 +404,4 @@ su - rhel -c 'cd /home/rhel/netbox-setup; ansible-navigator run /home/rhel/netbo
 '''
 
 [.text-center]
-_End of Exercise 2_
+_End of Module 2_
